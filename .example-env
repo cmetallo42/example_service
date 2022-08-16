@@ -1,0 +1,4 @@
+CLUSTER_ID="test-cluster"
+CLIENT_NAME="client-123"
+SUBJECT="test"
+DSN="host=localhost port=5433 dbname=test user=postgres password=test"
