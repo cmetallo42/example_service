@@ -1,0 +1,23 @@
+{% import "test1/models" %}
+{% import "encoding/json" %}
+
+{% func Code(data models.Objects) %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Database</title>
+</head>
+<body>
+	{% for _, object := range data %}
+		{% code u, _ := json.Marshal(object.ID) %}
+		{%z u %}
+		{% code d := object.Data.Bytes %}
+		{%z d %}
+		<br>
+		<br>
+	{% endfor %}
+</body>
+</html>
+{% endfunc %}
